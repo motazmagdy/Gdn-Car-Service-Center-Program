@@ -14,4 +14,4 @@ If the bill is over 10000 , a complimentary cleaning is provided for the Client 
 
 ## Technologies 
 
-This project was generated with Es6 , Bootstrap version 5.2.3 
+This program was generated with Es6 , Bootstrap version 5.2.3 
