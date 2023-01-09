@@ -14,7 +14,7 @@ class CarsService {
     getBSBill(pricebs){
         this.getElementFromDOM()
         if(this.BS01){
-            fixesDetail.innerHTML = `<b>Charges for </b> Basic Servicing - ₹ ${pricebs}<br>`
+            fixesDetail.innerHTML = `<b>Charges for </b> Basic Servicing - L.E. ${pricebs}<br>`
             return pricebs
         }else{
             return 0
@@ -22,7 +22,7 @@ class CarsService {
     }
     getEFBill(priceef){
         if(this.EF01){
-            fixesDetail.innerHTML += `<b>Charges for </b> Engine Fixing - ₹ ${priceef}<br>`
+            fixesDetail.innerHTML += `<b>Charges for </b> Engine Fixing - L.E. ${priceef}<br>`
             return priceef
         }else{
             return 0
@@ -30,7 +30,7 @@ class CarsService {
     }
     getCFBill(pricecf){
         if(this.CF01){
-            fixesDetail.innerHTML += `<b>Charges for </b> Clutch Fixing - ₹ ${pricecf}<br>`
+            fixesDetail.innerHTML += `<b>Charges for </b> Clutch Fixing - L.E. ${pricecf}<br>`
             return pricecf
         }else{
             return 0
@@ -38,7 +38,7 @@ class CarsService {
     }
     getBFBill(pricebf){
         if(this.BF01){
-            fixesDetail.innerHTML += `<b>Charges for </b> Brake Fixing - ₹ ${pricebf}<br>`
+            fixesDetail.innerHTML += `<b>Charges for </b> Brake Fixing - L.E. ${pricebf}<br>`
             return pricebf
         }else{
             return 0
@@ -46,7 +46,7 @@ class CarsService {
     }
     getGFBill(pricegf){
         if(this.GF01){
-            fixesDetail.innerHTML += `<b>Charges for </b> Gear Fixing - ₹ ${pricegf}<br>`
+            fixesDetail.innerHTML += `<b>Charges for </b> Gear Fixing - L.E. ${pricegf}<br>`
             return pricegf
         }else{
             return 0
@@ -55,7 +55,7 @@ class CarsService {
     getTotalBill(pricebs,priceef,pricecf,pricebf,pricegf){
         var sum = this.getBSBill(pricebs) + this.getEFBill(priceef)+this.getCFBill(pricecf)+this.getBFBill(pricebf)+this.getGFBill(pricegf)
         let totalBill = document.getElementById('totalbill')
-        totalBill.innerHTML = `Total Bill - ₹ ${sum}<br>`
+        totalBill.innerHTML = `Total Bill - L.E. ${sum}<br>`
         if(sum > 10000){
            let complBill = document.getElementById('complim')
            complBill.innerHTML =`You got a <b>Complimentary Cleaning</b> for free , Hope to see you again`
